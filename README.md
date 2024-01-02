@@ -6,7 +6,8 @@ This work implements the balanced mesh generation algorithm introduced by Fabric
 
 ## How It Works
 
-- **Initialization (`tic; ... maxRL = 7;`)**: Sets up global variables, including counters for nodes and quadrants, maximum refinement level, and structures to hold quadrants that need balancing.
+- **Initialization (`tic; ... maxRL = 7;`)**:
+- Sets up global variables, including counters for nodes and quadrants, maximum refinement level, and structures to hold quadrants that need balancing.
 - **File Reading and Domain Setup (`fopen(filename, 'r');`)**: Opens the specified `.poly` file, reading vertex and segment data to understand the domain's layout. It ignores comments and irrelevant lines.
 - **Boundary Tracing and Rearrangement (`findBoundaries(segments, vertices)`)**: Identifies outer and inner boundaries of the domain and reorders vertices to facilitate the polygon-filling processes.
 - **Quadrant Initialization and Recursive Refinement (`initializeQuadrant(vertices)`)**: Initializes the first quadrant to cover the entire domain and then recursively subdivides it.
