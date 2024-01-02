@@ -29,7 +29,7 @@ function quadrant = initializeQuadrant(vertices)
 ```
 - Initializes the first quadrant to cover the entire domain and then recursively subdivides it.
 - After reading the .poly file and storing its data, we proceed to plot our domain and intialize the mesh.
-![Mesh Initialization](initalize_mesh.png)
+![Mesh Initialization](Initalize_mesh.png)
 ### Recursive refinement :
  ```matlab
 function refineQuadrant(quadrant, currentRL, segments, vertices)
