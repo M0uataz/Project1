@@ -7,18 +7,22 @@ This work implements the balanced mesh generation algorithm introduced by Fabric
 ## How It Works
 
  ### Initialization (`tic; ... maxRL = 7;`) :
-- Sets up global variables, including counters for nodes and quadrants, maximum refinement level, and structures to hold quadrants that need balancing.  
- **File Reading and Domain Setup (`fopen(filename, 'r');`)**:
+- Sets up global variables, including counters for nodes and quadrants, maximum refinement level, and structures to hold quadrants that need balancing.
+  ...matlab
+  maxRL = 8;                % maximum refinement level
+  to_balance = {};          % list of quadrants to balance
+  allQuadrants = {};        % empty cell array to hold quadrant details
+ ### File Reading and Domain Setup (`fopen(filename, 'r');`) :
 -  Opens the specified `.poly` file, reading vertex and segment data to understand the domain's layout. It ignores comments and irrelevant lines.  
- **Boundary Tracing and Rearrangement (`findBoundaries(segments, vertices)`)**:
+ ### Boundary Tracing and Rearrangement (`findBoundaries(segments, vertices)`) :
 - Identifies outer and inner boundaries of the domain and reorders vertices to facilitate the polygon-filling processes.  
- **Quadrant Initialization and Recursive Refinement (`initializeQuadrant(vertices)`)**:
+ ### Quadrant Initialization and Recursive Refinement (`initializeQuadrant(vertices)`) :
 - Initializes the first quadrant to cover the entire domain and then recursively subdivides it.  
-**Intersection Checking (`doIntersect(p1, q1, p2, q2)`)**:
+ ### Intersection Checking (`doIntersect(p1, q1, p2, q2)`) :
 - Each edge of the quadrant is checked for intersection with the domain boundaries to decide further subdivision.  
- **Balancing and Further Subdivision (`balanceQuadrants(segments, vertices)`)**:
+ ### Balancing and Further Subdivision (`balanceQuadrants(segments, vertices)`) :
 - After the initial refinement, the algorithm balances the mesh by ensuring that adjacent quadrants don't have significantly different refinement levels.  
- **Visualization (`plotQuadrant(quadrant, isInside)`)**:
+ ### Visualization (`plotQuadrant(quadrant, isInside)`) :
 - Utilizes MATLAB's plotting capabilities to visualize the initial domain and the refined quadrants, aiding in understanding and validating the refinement process.  
 
 ## Usage
