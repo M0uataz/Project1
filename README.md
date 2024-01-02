@@ -15,9 +15,7 @@ allQuadrants = {};
 ```
  ### File Reading and Domain Setup :
  ```matlab
-maxRL = 8;
-to_balance = {};
-allQuadrants = {};
+fid = fopen(filename, 'r');
 ```
 -  Opens the specified `.poly` file, reading vertex and segment data to understand the domain's layout. It ignores comments and irrelevant lines.  
  ### Boundary Tracing :
