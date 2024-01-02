@@ -28,8 +28,10 @@ function boundaries = findBoundaries(segments, vertices)
 function quadrant = initializeQuadrant(vertices)
 ```
 - Initializes the first quadrant to cover the entire domain and then recursively subdivides it.
-- After reading the .poly file and storing its data, we proceed to plot our domain and intialize the mesh.
+### Mesh Initialization
 ![Mesh Initialization](Initalize_mesh.png)
+- After reading the .poly file and storing its data, we proceed to plot our domain and intialize the mesh.
+
 ### Recursive refinement :
  ```matlab
 function refineQuadrant(quadrant, currentRL, segments, vertices)
