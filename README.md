@@ -12,6 +12,7 @@ This work implements the balanced mesh generation algorithm introduced by Fabric
 maxRL = 8;
 to_balance = {};
 allQuadrants = {};
+```
  ### File Reading and Domain Setup (`fopen(filename, 'r');`) :
 -  Opens the specified `.poly` file, reading vertex and segment data to understand the domain's layout. It ignores comments and irrelevant lines.  
  ### Boundary Tracing and Rearrangement (`findBoundaries(segments, vertices)`) :
