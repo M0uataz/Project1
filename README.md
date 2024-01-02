@@ -28,6 +28,7 @@ function boundaries = findBoundaries(segments, vertices)
 function quadrant = initializeQuadrant(vertices)
 ```
 - Initializes the first quadrant to cover the entire domain and then recursively subdivides it.
+- After reading the .poly file and storing its data, we proceed to plot our domain and intialize the mesh. 
 ### Recursive refinement :
  ```matlab
 function refineQuadrant(quadrant, currentRL, segments, vertices)
@@ -65,7 +66,7 @@ The following input generates the meshes shown in the images:
 `maxRL = 8`
 
 ### Unbalanced Mesh 
-![Unbalanced Mesh](/path/to/Screenshot_2024-01-02_185044.png)
+![Unbalanced Mesh](UNB_maxRL_8.png)
 
 ### Balanced Mesh
 ![Balanced Mesh](/path/to/Screenshot_2024-01-02_185309.png)
