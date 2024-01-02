@@ -8,11 +8,10 @@ This work implements the balanced mesh generation algorithm introduced by Fabric
 
  ### Initialization (`tic; ... maxRL = 7;`) :
 - Sets up global variables, including counters for nodes and quadrants, maximum refinement level, and structures to hold quadrants that need balancing.
-  ...matlab
-  maxRL = 8;                % maximum refinement level
-  to_balance = {};          % list of quadrants to balance
-  allQuadrants = {};        % empty cell array to hold quadrant details
-  ...
+```matlab
+maxRL = 8;
+to_balance = {};
+allQuadrants = {};
  ### File Reading and Domain Setup (`fopen(filename, 'r');`) :
 -  Opens the specified `.poly` file, reading vertex and segment data to understand the domain's layout. It ignores comments and irrelevant lines.  
  ### Boundary Tracing and Rearrangement (`findBoundaries(segments, vertices)`) :
