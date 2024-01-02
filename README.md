@@ -28,6 +28,7 @@ function boundaries = findBoundaries(segments, vertices)
 function quadrant = initializeQuadrant(vertices)
 ```
 - Initializes the first quadrant to cover the entire domain and then recursively subdivides it.
+### Mesh Initialization
 ![Mesh Initialization](Initialize_mesh.png)
 - After reading the .poly file and storing its data, we proceed to plot our domain and intialize the mesh.
 
